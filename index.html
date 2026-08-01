@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhuvaneswaran R — Order-to-Cash Leader</title>
+<meta name="description" content="Bhuvaneswaran R — Senior Order-to-Cash (O2C) Leader. 20+ years driving global OTC operations, ERP transformation, and revenue assurance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10233F;
+    --ink-soft:#1B3352;
+    --paper:#F3EFE6;
+    --paper-line:#C9C2B2;
+    --brass:#B8873B;
+    --ledger-green:#2F5D50;
+    --charcoal:#1B1B1B;
+    --muted:#5B5A52;
+    --white:#FBFAF6;
+    --radius:2px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--charcoal);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--brass);color:var(--white);}
+  a{color:inherit;text-decoration:none;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  .display{font-family:'Fraunces', serif;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ---------- Focus ---------- */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--brass);
+    outline-offset:3px;
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(243,239,230,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--paper-line);
+  }
+  .nav-inner{
+    max-width:1120px; margin:0 auto;
+    padding:18px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-mark{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem;
+    letter-spacing:0.01em;
+  }
+  .nav-mark span{color:var(--brass);}
+  nav.links{display:flex; gap:32px;}
+  nav.links a{
+    font-size:0.82rem; text-transform:uppercase; letter-spacing:0.08em;
+    color:var(--ink-soft); position:relative; padding-bottom:4px;
+  }
+  nav.links a::after{
+    content:''; position:absolute; left:0; bottom:0; height:1px; width:0;
+    background:var(--brass); transition:width .25s ease;
+  }
+  nav.links a:hover::after, nav.links a:focus-visible::after{width:100%;}
+  .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:4px;}
+  .nav-toggle span{display:block; width:22px; height:2px; background:var(--ink); margin:5px 0;}
+
+  @media (max-width:760px){
+    nav.links{
+      position:fixed; top:64px; right:0; left:0;
+      background:var(--paper);
+      flex-direction:column; gap:0;
+      border-bottom:1px solid var(--paper-line);
+      max-height:0; overflow:hidden; transition:max-height .3s ease;
+    }
+    nav.links.open{max-height:320px;}
+    nav.links a{padding:16px 28px; border-top:1px solid var(--paper-line);}
+    .nav-toggle{display:block;}
+  }
+
+  /* ---------- HERO / STATEMENT HEADER ---------- */
+  .statement{
+    max-width:1120px; margin:0 auto;
+    padding:64px 28px 0;
+  }
+  .statement-frame{
+    border:1px solid var(--ink);
+    background:var(--white);
+    box-shadow:6px 6px 0 var(--brass);
+  }
+  .statement-top{
+    padding:44px 40px 32px;
+    border-bottom:1px dashed var(--paper-line);
+  }
+  .eyebrow{
+    font-size:0.75rem; text-transform:uppercase; letter-spacing:0.18em;
+    color:var(--brass); font-weight:600; margin-bottom:14px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:''; width:26px; height:1px; background:var(--brass);
+  }
+  h1.hero-name{
+    font-size:clamp(2.4rem, 5.5vw, 4.2rem);
+    font-weight:600; line-height:1.02; color:var(--ink);
+    opacity:0; transform:translateY(14px);
+    animation: rise .8s ease forwards .15s;
+  }
+  .hero-title{
+    margin-top:14px; font-size:clamp(1.05rem,2vw,1.35rem);
+    color:var(--ledger-green); font-weight:600;
+    opacity:0; transform:translateY(10px);
+    animation: rise .8s ease forwards .35s;
+  }
+  .hero-loc{
+    margin-top:10px; font-size:0.9rem; color:var(--muted);
+    opacity:0; animation: fadeIn .8s ease forwards .5s;
+  }
+  @keyframes rise{to{opacity:1; transform:translateY(0);}}
+  @keyframes fadeIn{to{opacity:1;}}
+
+  .hero-summary{
+    padding:28px 40px 8px; max-width:78ch;
+    color:var(--charcoal); font-size:1.02rem;
+  }
+
+  /* statement summary — ledger line items */
+  .statement-lines{
+    padding:8px 40px 40px;
+  }
+  .stline{
+    display:flex; align-items:baseline; justify-content:space-between;
+    gap:16px; padding:13px 0;
+    border-bottom:1px dotted var(--paper-line);
+  }
+  .stline:last-child{border-bottom:none;}
+  .stline .label{
+    font-size:0.92rem; color:var(--muted);
+  }
+  .stline .fill{
+    flex:1; border-bottom:1px dotted var(--paper-line);
+    margin:0 10px; transform:translateY(-4px);
+  }
+  .stline .value{
+    font-family:'IBM Plex Mono', monospace; font-weight:600;
+    color:var(--ink); font-size:1.02rem; white-space:nowrap;
+  }
+  .stline .value em{
+    font-style:normal; color:var(--ledger-green);
+  }
+
+  .statement-footer{
+    display:flex; flex-wrap:wrap; gap:14px 28px;
+    padding:22px 40px; background:var(--ink); color:var(--white);
+  }
+  .statement-footer a{
+    font-size:0.85rem; display:flex; align-items:center; gap:8px;
+    color:var(--white); opacity:0.92;
+  }
+  .statement-footer a:hover{color:var(--brass); opacity:1;}
+  .statement-footer .dot{width:5px;height:5px;background:var(--brass); border-radius:50%;}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{max-width:1120px; margin:0 auto; padding:88px 28px;}
+  .section-head{
+    display:flex; align-items:baseline; gap:18px; margin-bottom:44px;
+  }
+  .section-num{
+    font-family:'IBM Plex Mono', monospace; color:var(--brass);
+    font-size:0.85rem;
+  }
+  .section-title{
+    font-family:'Fraunces', serif; font-size:clamp(1.6rem,3vw,2.2rem);
+    font-weight:600; color:var(--ink);
+  }
+  .section-rule{
+    flex:1; height:1px; background:var(--paper-line);
+  }
+
+  .reveal{
+    opacity:0; transform:translateY(24px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- SUMMARY ---------- */
+  .summary-grid{
+    display:grid; grid-template-columns:1.4fr 1fr; gap:56px;
+  }
+  .summary-text p{color:var(--charcoal); font-size:1.02rem; margin-bottom:18px;}
+  .summary-text p:first-child{
+    font-family:'Fraunces', serif; font-size:1.35rem; font-weight:500;
+    color:var(--ink); line-height:1.5;
+  }
+  .impact-box{
+    border:1px solid var(--ink); background:var(--white); padding:28px;
+  }
+  .impact-box h3{
+    font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em;
+    color:var(--brass); margin-bottom:18px;
+  }
+  .impact-row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:10px 0; border-bottom:1px dotted var(--paper-line);
+  }
+  .impact-row:last-child{border-bottom:none;}
+  .impact-row .n{font-family:'IBM Plex Mono', monospace; font-weight:600; color:var(--ledger-green); font-size:1.1rem;}
+  .impact-row .d{font-size:0.85rem; color:var(--muted); text-align:right; max-width:60%;}
+
+  @media (max-width:820px){
+    .summary-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- EXPERIENCE (LEDGER) ---------- */
+  .ledger{
+    position:relative;
+    border-left:1px solid var(--paper-line);
+    margin-left:6px;
+  }
+  .entry{
+    position:relative;
+    padding:0 0 48px 34px;
+  }
+  .entry:last-child{padding-bottom:0;}
+  .entry::before{
+    content:''; position:absolute; left:-6px; top:6px;
+    width:11px; height:11px; border-radius:50%;
+    background:var(--paper); border:2px solid var(--brass);
+  }
+  .entry-head{
+    display:flex; flex-wrap:wrap; align-items:baseline;
+    justify-content:space-between; gap:8px 24px; margin-bottom:6px;
+  }
+  .entry-role{
+    font-family:'Fraunces', serif; font-size:1.25rem; font-weight:600; color:var(--ink);
+  }
+  .entry-company{
+    color:var(--ledger-green); font-weight:600; font-size:0.98rem;
+  }
+  .entry-dates{
+    font-family:'IBM Plex Mono', monospace; font-size:0.82rem;
+    color:var(--muted); white-space:nowrap;
+  }
+  .entry-impact{
+    font-size:0.95rem; color:var(--charcoal); margin:10px 0 12px;
+    padding:12px 16px; background:var(--white); border-left:3px solid var(--brass);
+  }
+  details.entry-detail summary{
+    cursor:pointer; font-size:0.83rem; color:var(--brass);
+    text-transform:uppercase; letter-spacing:0.08em; font-weight:600;
+    list-style:none; display:flex; align-items:center; gap:8px;
+  }
+  details.entry-detail summary::-webkit-details-marker{display:none;}
+  details.entry-detail summary::before{
+    content:'+'; font-family:'IBM Plex Mono', monospace; font-size:1rem;
+    display:inline-block; transition:transform .2s ease;
+  }
+  details.entry-detail[open] summary::before{content:'–';}
+  .entry-bullets{
+    margin:14px 0 0; padding-left:0; list-style:none;
+  }
+  .entry-bullets li{
+    position:relative; padding-left:18px; margin-bottom:9px;
+    font-size:0.93rem; color:var(--charcoal);
+  }
+  .entry-bullets li::before{
+    content:'—'; position:absolute; left:0; color:var(--paper-line); color:var(--muted);
+  }
+
+  /* ---------- SKILLS ---------- */
+  .tag-grid{display:flex; flex-wrap:wrap; gap:10px;}
+  .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:0.82rem;
+    padding:9px 14px; border:1px solid var(--ink); color:var(--ink);
+    background:var(--white); transition:background .2s ease, color .2s ease;
+  }
+  .tag:hover{background:var(--ink); color:var(--white);}
+
+  /* ---------- EDUCATION ---------- */
+  .edu-list{display:grid; gap:0; border-top:1px solid var(--paper-line);}
+  .edu-row{
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px;
+    padding:20px 0; border-bottom:1px solid var(--paper-line);
+  }
+  .edu-name{font-weight:600; color:var(--ink);}
+  .edu-org{color:var(--muted); font-size:0.92rem;}
+  .edu-date{font-family:'IBM Plex Mono', monospace; font-size:0.85rem; color:var(--brass); white-space:nowrap;}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  footer.contact{
+    background:var(--ink); color:var(--white); margin-top:40px;
+  }
+  .contact-inner{
+    max-width:1120px; margin:0 auto; padding:80px 28px 48px;
+  }
+  .contact-inner .section-title{color:var(--white);}
+  .contact-inner .section-rule{background:rgba(255,255,255,0.18);}
+  .contact-lead{
+    font-family:'Fraunces', serif; font-size:clamp(1.4rem,3vw,1.9rem);
+    max-width:26ch; margin-bottom:36px; font-weight:500;
+  }
+  .contact-grid{
+    display:flex; flex-wrap:wrap; gap:16px;
+  }
+  .contact-card{
+    flex:1; min-width:220px;
+    border:1px solid rgba(255,255,255,0.22); padding:20px;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .contact-card:hover{border-color:var(--brass); transform:translateY(-3px);}
+  .contact-card .k{
+    font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em;
+    color:var(--brass); margin-bottom:8px;
+  }
+  .contact-card .v{font-family:'IBM Plex Mono', monospace; font-size:0.95rem;}
+  .fine{
+    margin-top:56px; font-size:0.78rem; color:rgba(255,255,255,0.5);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+    padding-top:24px; border-top:1px solid rgba(255,255,255,0.14);
+  }
+
+  @media (max-width:640px){
+    .statement-top, .hero-summary, .statement-lines{padding-left:22px; padding-right:22px;}
+    .statement-footer{padding:20px 22px;}
+    section{padding:64px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">Bhuvaneswaran<span>.</span>R</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="links" id="navLinks">
+      <a href="#summary">Summary</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div id="top" class="statement">
+  <div class="statement-frame">
+    <div class="statement-top">
+      <div class="eyebrow">Statement of Record</div>
+      <h1 class="hero-name">Bhuvaneswaran&nbsp;R</h1>
+      <div class="hero-title">Senior Order‑to‑Cash (O2C) Leader</div>
+      <div class="hero-loc">Porur, Chennai – 600116, India</div>
+    </div>
+
+    <div class="hero-summary">
+      <p>20+ years driving end‑to‑end OTC operations — Order Management, Billing, Credit Risk, Collections, Disputes, Cash Application, and Revenue Assurance — across ERP‑led transformations and global shared‑services teams in the US, EMEA, and APAC.</p>
+    </div>
+
+    <div class="statement-lines">
+      <div class="stline"><span class="label">Order portfolio managed</span><span class="fill"></span><span class="value">$50M<em>+</em></span></div>
+      <div class="stline"><span class="label">Accounts receivable portfolio</span><span class="fill"></span><span class="value">$90M</span></div>
+      <div class="stline"><span class="label">Global team leadership</span><span class="fill"></span><span class="value">50<em>+</em> people</span></div>
+      <div class="stline"><span class="label">Cost optimization delivered</span><span class="fill"></span><span class="value">$1.2M</span></div>
+      <div class="stline"><span class="label">DSO reduction achieved</span><span class="fill"></span><span class="value">10<em>+</em> days</span></div>
+    </div>
+
+    <div class="statement-footer">
+      <a href="mailto:catchhere@gmail.com"><span class="dot"></span>catchhere@gmail.com</a>
+      <a href="tel:+919600004593"><span class="dot"></span>+91 96000 04593</a>
+      <a href="https://www.linkedin.com/in/bhuvanrangnath/" target="_blank" rel="noopener"><span class="dot"></span>linkedin.com/in/bhuvanrangnath</a>
+    </div>
+  </div>
+</div>
+
+<section id="summary">
+  <div class="section-head">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Summary</h2>
+    <span class="section-rule"></span>
+  </div>
+  <div class="summary-grid reveal">
+    <div class="summary-text">
+      <p>A career built on making receivables move — closing the gap between an order placed and cash collected, at global scale.</p>
+      <p>Proven expertise in ERP transformation (SAP/Oracle), automation, and process optimization to improve DSO, cash flow, and working‑capital performance. Experienced leading global teams and shared‑services operations across the US, EMEA, and APAC, ensuring SOX compliance, governance, and operational excellence through Lean Six Sigma methodologies.</p>
+    </div>
+    <div class="impact-box">
+      <h3>Core Competencies</h3>
+      <div class="impact-row"><span class="n">O2C</span><span class="d">End‑to‑end Order‑to‑Cash ownership</span></div>
+      <div class="impact-row"><span class="n">ERP</span><span class="d">SAP, Oracle, Salesforce, MS Dynamics</span></div>
+      <div class="impact-row"><span class="n">DSO</span><span class="d">Collections strategy &amp; reduction</span></div>
+      <div class="impact-row"><span class="n">LSS</span><span class="d">Lean Six Sigma &amp; process transformation</span></div>
+      <div class="impact-row"><span class="n">GOV</span><span class="d">SOX compliance &amp; governance</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-head">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Experience</h2>
+    <span class="section-rule"></span>
+  </div>
+
+  <div class="ledger">
+
+    <div class="entry reveal">
+      <div class="entry-head">
+        <div><span class="entry-role">Senior Manager – O2C</span> &nbsp;·&nbsp; <span class="entry-company">HCL Tech</span></div>
+        <div class="entry-dates">Apr 2023 – Present</div>
+      </div>
+      <div class="entry-impact">Drove end‑to‑end OTC transformation, lifting order accuracy to 99%, cutting cycle time 20% and billing defects 40%, while managing a $30M+ order portfolio.</div>
+      <details class="entry-detail">
+        <summary>View the full ledger entry</summary>
+        <ul class="entry-bullets">
+          <li>Directed a 20‑member global billing organization, managing complex multi‑entity invoicing across the U.S. market.</li>
+          <li>Reduced billing defects by 40% by implementing automated validation controls and standardized billing processes.</li>
+          <li>Accelerated month‑end close and revenue recognition cycles through strengthened governance and process alignment.</li>
+          <li>Built Power BI analytics and executive dashboards for real‑time billing visibility and strategic decision support.</li>
+          <li>Spearheaded Order Management transformation, managing a $30M+ annual order portfolio across Sales, Finance, and Supply Chain.</li>
+          <li>Eliminated 35% of manual touchpoints across enterprise order workflows, improving efficiency and scalability.</li>
+          <li>Established the OTC governance framework — KPIs, SLA management, and real‑time performance dashboards.</li>
+          <li>Led performance management, capability development, and succession planning for global operations teams.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-head">
+        <div><span class="entry-role">Ops Manager – OTC/GTN</span> &nbsp;·&nbsp; <span class="entry-company">Accenture Services Pvt Ltd</span></div>
+        <div class="entry-dates">Jan 2019 – Mar 2023</div>
+      </div>
+      <div class="entry-impact">Reduced aged AR from $1.4M to $380K, disputes from $1.6M to $350K, cleared unbilled backlog from $3.8M to $1.2M, and delivered 9 FTE efficiency gains worth $1.5M in savings.</div>
+      <details class="entry-detail">
+        <summary>View the full ledger entry</summary>
+        <ul class="entry-bullets">
+          <li>Led a 30+ FTE global OTC organization spanning Collections, Dispute Management, and Cash Application across multiple regions.</li>
+          <li>Reduced DSO by 10+ days through segmented collection strategies and prioritized recovery models.</li>
+          <li>Implemented Auto‑Cash Engine and SAP Lockbox automation, lifting cash application hit rate from 50% to 75% and eliminating 3,500+ manual hours a year.</li>
+          <li>Designed Power BI dashboards giving leadership visibility into DSO, unapplied cash, and dispute root‑cause analysis.</li>
+          <li>Strengthened dispute resolution governance through structured workflows with Sales and Billing teams.</li>
+          <li>Led Gross‑to‑Net optimization initiatives, improving profitability through forecasting and discount governance.</li>
+          <li>Partnered with Business and Sales leadership on region‑specific commercial programs and pricing strategies.</li>
+          <li>Mentored global teams toward process standardization and continuous improvement.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-head">
+        <div><span class="entry-role">Operations Manager – OTC</span> &nbsp;·&nbsp; <span class="entry-company">Teleperformance (Intelenet Global Services)</span></div>
+        <div class="entry-dates">Jan 2018 – Sep 2018</div>
+      </div>
+      <div class="entry-impact">Reduced unapplied cash from $7.3M to $3.5M — recognized with "Best Team" and "Best Process Lead" awards.</div>
+      <details class="entry-detail">
+        <summary>View the full ledger entry</summary>
+        <ul class="entry-bullets">
+          <li>Led a 30+ member global Credit &amp; Collections team supporting US, Canada, and UK markets.</li>
+          <li>Managed a $60M accounts receivable portfolio across 1,200+ active customer accounts.</li>
+          <li>Reduced DSO from 74 to 65 days within two months through focused collection strategies.</li>
+          <li>Strengthened credit risk governance, cash forecasting accuracy, and customer risk profiling.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-head">
+        <div><span class="entry-role">Specialist (AM), NA &amp; CA – OTC Operations</span> &nbsp;·&nbsp; <span class="entry-company">Shell BPO</span></div>
+        <div class="entry-dates">May 2016 – Dec 2017</div>
+      </div>
+      <div class="entry-impact">Earned "Best Lead Award" for the Canada process rollout, saving 20 minutes per billing cycle and cutting disputed value from $1.2M to $220K.</div>
+      <details class="entry-detail">
+        <summary>View the full ledger entry</summary>
+        <ul class="entry-bullets">
+          <li>Managed a $30M North America portfolio, ensuring receivables governance and revenue assurance.</li>
+          <li>Delivered $350K in cost savings through cycle‑counting automation.</li>
+          <li>Led structured training programs, driving a 20% productivity improvement across teams.</li>
+          <li>Developed FMEA frameworks to proactively mitigate operational and financial risk.</li>
+          <li>Ensured SOX compliance across internal and external OTC control frameworks.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-head">
+        <div><span class="entry-role">Team Lead [Sr. Analyst] – Telecom O2C</span> &nbsp;·&nbsp; <span class="entry-company">Accenture</span></div>
+        <div class="entry-dates">Oct 2005 – Apr 2016</div>
+      </div>
+      <div class="entry-impact">Managed 900+ customer accounts and contracts up to $2M, led 14 audit projects at 100% SLA, and drove global process transitions across Mumbai, Dublin, and the US.</div>
+      <details class="entry-detail">
+        <summary>View the full ledger entry</summary>
+        <ul class="entry-bullets">
+          <li>Led end‑to‑end OTC operations — Master Data, Billing, Collections, Cash Application, and AR management.</li>
+          <li>Managed invoicing for high‑value contracts from $50K to $2M with recurring billing structures.</li>
+          <li>Governed customer credit line approvals, prepayment negotiation, and chargeback resolution.</li>
+          <li>Delivered Mumbai and Dublin transition projects — L3 documentation, SOPs, and knowledge transfer.</li>
+          <li>Managed the US project transition for TNS Telecom, ensuring timely delivery‑team readiness.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-head">
+        <div><span class="entry-role">Senior Process Associate (Voice)</span> &nbsp;·&nbsp; <span class="entry-company">IBM</span></div>
+        <div class="entry-dates">Apr 2005 – Jun 2005</div>
+      </div>
+      <div class="entry-impact">Diagnosed technical issues, escalated complex cases, and maintained accurate incident tracking for service continuity.</div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-head">
+        <div><span class="entry-role">Customer Support Executive (Voice)</span> &nbsp;·&nbsp; <span class="entry-company">HCL BPO</span></div>
+        <div class="entry-dates">Aug 2004 – Feb 2005</div>
+      </div>
+      <div class="entry-impact">Delivered Level‑1 technical support, remote troubleshooting, and trend analysis that fed back into product improvement.</div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-head">
+        <div><span class="entry-role">Administrator</span> &nbsp;·&nbsp; <span class="entry-company">Own Business – Net Addict Browsing</span></div>
+        <div class="entry-dates">Apr 2001 – Jul 2004</div>
+      </div>
+      <div class="entry-impact">Ran daily operations end‑to‑end — systems, housekeeping, and petty‑cash management.</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-head">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Skills &amp; Systems</h2>
+    <span class="section-rule"></span>
+  </div>
+  <div class="tag-grid reveal">
+    <span class="tag">Order Management</span>
+    <span class="tag">Contract Administration</span>
+    <span class="tag">Global Billing</span>
+    <span class="tag">Credit Risk</span>
+    <span class="tag">Collections Strategy</span>
+    <span class="tag">DSO Reduction</span>
+    <span class="tag">Cash Application Automation</span>
+    <span class="tag">Dispute Resolution</span>
+    <span class="tag">Revenue Assurance</span>
+    <span class="tag">SAP</span>
+    <span class="tag">Oracle</span>
+    <span class="tag">Salesforce</span>
+    <span class="tag">MS Dynamics</span>
+    <span class="tag">Power BI</span>
+    <span class="tag">Lean Six Sigma</span>
+    <span class="tag">SOX Compliance</span>
+    <span class="tag">Shared Services Leadership</span>
+    <span class="tag">Process Transformation</span>
+  </div>
+</section>
+
+<section id="education">
+  <div class="section-head">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Education &amp; Certifications</h2>
+    <span class="section-rule"></span>
+  </div>
+  <div class="edu-list reveal">
+    <div class="edu-row">
+      <div><div class="edu-name">Bachelor of Commerce</div><div class="edu-org">Pachaiyappa's Arts &amp; Science College</div></div>
+      <div class="edu-date">May 1997</div>
+    </div>
+    <div class="edu-row">
+      <div><div class="edu-name">MBA (Final year in progress)</div><div class="edu-org">Madras University</div></div>
+      <div class="edu-date">Ongoing</div>
+    </div>
+    <div class="edu-row">
+      <div><div class="edu-name">Black Belt Certification</div><div class="edu-org">Lean Six Sigma</div></div>
+      <div class="edu-date">Feb 2025</div>
+    </div>
+    <div class="edu-row">
+      <div><div class="edu-name">Java and A+ Certified Professional</div><div class="edu-org">Radiant Hardware Centre</div></div>
+      <div class="edu-date">Jun 2010</div>
+    </div>
+    <div class="edu-row">
+      <div><div class="edu-name">GNIIT</div><div class="edu-org">NIIT Pvt. Ltd. – Nungambakkam</div></div>
+      <div class="edu-date">Feb 2001</div>
+    </div>
+  </div>
+</section>
+
+<footer class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-head">
+      <span class="section-num" style="color:var(--brass);">05</span>
+      <h2 class="section-title">Close the Loop</h2>
+      <span class="section-rule"></span>
+    </div>
+    <p class="contact-lead">Open to conversations on O2C transformation, shared‑services leadership, and working‑capital performance.</p>
+    <div class="contact-grid reveal">
+      <a class="contact-card" href="mailto:catchhere@gmail.com">
+        <div class="k">Email</div><div class="v">catchhere@gmail.com</div>
+      </a>
+      <a class="contact-card" href="tel:+919600004593">
+        <div class="k">Phone</div><div class="v">+91 96000 04593</div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/bhuvanrangnath/" target="_blank" rel="noopener">
+        <div class="k">LinkedIn</div><div class="v">/in/bhuvanrangnath</div>
+      </a>
+      <div class="contact-card">
+        <div class="k">Based in</div><div class="v">Chennai, India</div>
+      </div>
+    </div>
+    <div class="fine">
+      <span>© <span id="year"></span> Bhuvaneswaran R</span>
+      <span>Statement prepared for the record.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var isOpen = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ links.classList.remove('open'); });
+  });
+
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:0.12});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+
+</body>
+</html>
